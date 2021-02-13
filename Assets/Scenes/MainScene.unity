@@ -11852,6 +11852,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d0958dd76138804d88605477599b2a0, type: 3}
+--- !u!198 &1753752009 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4508679639123914709, guid: 5b6f903e4db95a14fb3ab17f734b77f4, type: 3}
+  m_PrefabInstance: {fileID: 4996387633096639035}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1843162702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12523,6 +12528,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ruby
       objectReference: {fileID: 0}
+    - target: {fileID: 4996387632936601254, guid: 5b6f903e4db95a14fb3ab17f734b77f4, type: 3}
+      propertyPath: HitEffect
+      value: 
+      objectReference: {fileID: 1753752009}
     - target: {fileID: 4996387632936601255, guid: 5b6f903e4db95a14fb3ab17f734b77f4, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -12567,6 +12576,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8482371861834497839, guid: 5b6f903e4db95a14fb3ab17f734b77f4, type: 3}
+      propertyPath: m_Name
+      value: HitEffect
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b6f903e4db95a14fb3ab17f734b77f4, type: 3}
 --- !u!1001 &7240852411970638648
@@ -12576,6 +12589,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2848969396039853829, guid: 99be316758cb344428df30e4274c2566, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2848969396039853829, guid: 99be316758cb344428df30e4274c2566, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.089
+      objectReference: {fileID: 0}
     - target: {fileID: 6655813374300573726, guid: 99be316758cb344428df30e4274c2566, type: 3}
       propertyPath: m_RootOrder
       value: 24

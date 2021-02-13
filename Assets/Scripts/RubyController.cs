@@ -12,6 +12,9 @@ public class RubyController : MonoBehaviour
     public int maxHealth = 5;
     public float timeInvincible = 2.0f;
 
+    public ParticleSystem HitEffect;
+    public ParticleSystem HealEffect;
+
     public int health { get { return currentHealth;  }}
     int currentHealth;
 
@@ -86,6 +89,7 @@ public class RubyController : MonoBehaviour
     {
         if(amount < 0)
         {
+            HitEffect.Play();
             animator.SetTrigger("Hit");
             if (isInvincible)
             {
@@ -93,6 +97,11 @@ public class RubyController : MonoBehaviour
             }
             isInvincible = true;
             invincibleTimer = timeInvincible;
+        }
+
+        if(amount > 0)
+        {
+            HealEffect.Play();
         }
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
