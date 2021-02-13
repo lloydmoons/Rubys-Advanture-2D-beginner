@@ -35,6 +35,9 @@ public class RubyController : MonoBehaviour
         //QualitySettings.vSyncCount = 0;
         //Application.targetFrameRate = 10;
 
+        HitEffect.Stop();
+        HealEffect.Stop();
+
         rigidbody2d = GetComponent<Rigidbody2D>();
 
         currentHealth = maxHealth;
@@ -72,6 +75,19 @@ public class RubyController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.C))
         {
             Launch();
+        }
+
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            RaycastHit2D hit = Physics2D.Raycast(rigidbody2d.position + Vector2.up * 0.2f, lookDirection, 1.5f, LayerMask.GetMask("NPC"));
+            if (hit.collider != null)
+            {
+                NonPlayerCharacter character = hit.collider.GetComponent<NonPlayerCharacter>();
+                if (character != null)
+                {
+                    character.DisplayDialog();
+                }
+            }
         }
     }
 
